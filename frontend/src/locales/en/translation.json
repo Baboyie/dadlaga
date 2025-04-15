@@ -1,0 +1,74 @@
+{
+  "home": {
+    "rooms": {
+      "title": "ROOMS",
+      "description": "Rest in comfort where style meets serenity — step into rooms crafted for peace, privacy, and pure relaxation."
+    },
+    "restaurant": {
+      "title": "RESTAURANT",
+      "description": "Dine in elegance where design meets delicious — welcome to <1/> a space where every meal feels special",
+      "barrier1": "FRESH FOOD EVERYDAY",
+      "text1": "You will be served by a professional chef of international standards.",
+      "pagetitle1": "Capacity & Service Info",
+      "text2": "Maximum seating capacity: 60 guests <1/>Reservations: Available for private events, birthdays & business dinners <1/> Staff on duty: 10-12 personnel during peak hours",
+      "barrier2": "Open daily from: 07:00 – 21:00",
+      "pagetitle2": "Our on-site restaurant offers a rich selection of gourmet dishes and fine beverages that will delight your palate and satisfy every craving.",
+      "text3": "Indulge in an exquisite dining experience at our hotel restaurant, where luxury meets culinary excellence. Our elegant ambiance, attentive service, and expertly crafted dishes ensure that every meal is memorable. Whether you're starting your day with a hearty breakfast, enjoying a leisurely lunch, or savoring a gourmet dinner, our restaurant offers a wide range of delectable dishes prepared with fresh, locally sourced ingredients.",
+      "barrier3":"OUR SPECIAL MENU",
+      "seeMore": "See More"
+    },
+    "entertainment": {
+      "title": "ENTERTAINMENT",
+      "description": "Unwind in style where fun meets flair — from bowling strikes to billiard nights, every moment is a scene worth remembering."
+    },
+    "location": {
+      "title": "LOCATION",
+      "address": "J.Sambuu St, Chingeltei <1/> district 5th horoo,<1/>Ulaanbaatar"
+    },
+    "aboutus": {
+      "title": "ABOUT US",
+      "description1": "Our team takes cues as to the level of service each guest expects.<1/>Familiar, chatty, or more reserved. Our distinct character is <1/>reflected both in service levels and the environment.",
+      "description2": "Our goal is to enhance the satisfaction of both guests and staff <1/>to the highest level, while providing luxurious and <1/>comfortable accommodations."
+    }
+  },
+    "header":{
+      "homebutton": "Home",
+      "roomsbutton": "Rooms",
+      "entertainmentbutton": "Entertainment",
+      "restaurantbutton": "Restaurant",
+      "aboutUsbutton": "About us",
+      "english": "English",
+      "mongolian": "Mongolian"
+    },
+      
+        "entertainment": {
+          "title": "ENTERTAINMENT",
+          "billiard": {
+            "title": "Billiard",
+            "description": "Our billiard room offers a fun and relaxing environment for guests of all skill levels. Grab a cue and challenge your friends to a friendly game of pool or snooker."
+          },
+          "pool": {
+            "title": "Indoor Pool",
+            "description": "Relax and rejuvenate in our heated indoor pool, open year-round. Perfect for swimming regardless of the weather, it offers a serene atmosphere with comfortable seating around the pool for guests to unwind."
+          },
+          "cinema": {
+            "title": "Cinema",
+            "description": "Experience the magic of cinema in our on-site theater. With comfortable seating and the latest film screenings, enjoy a movie night with friends and family."
+          },
+          "bowling": {
+            "title": "Bowling",
+            "description": "Hit the lanes and enjoy a game of bowling with friends or family. Our state-of-the-art bowling alley offers a fun and competitive atmosphere for all ages."
+          }
+        },
+          "room": {
+            "notFound": "Room not found",
+            "maxOccupancy": "Max Occupancy",
+            "beds": "Bed(s)",
+            "night": "night",
+            "bookNow": "Book Now",
+            "servicesAmenities": "Services & Amenities",
+            "seeMore": "See More",
+            "people": "people"
+          }
+  }
+  
