@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
-import roomsbackground from "../media/dadlaga/roomsbackground.png";
-import SectionBarrier from "../components/sectionbarrier.jsx";
+import roomsbackground from "../../media/dadlaga/roomsbackground.png";
+import SectionBarrier from "../../components/common/sectionbarrier.jsx";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { getRooms } from "../api"; // Import the API function
+import { getRooms } from "../../api.jsx"; // Import the API function
 
 export default function Rooms() {
   const theme = useTheme();

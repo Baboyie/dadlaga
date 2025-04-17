@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
-import entertainmenthero from "../media/dadlaga/entertainmenthero.png";
-import billiardImage from "../media/dadlaga/billiard.jpg";
-import pool from "../media/dadlaga/indoorpool.jpg";
-import cinema from "../media/dadlaga/cinema.jpg";
-import bowling from "../media/dadlaga/bowling.jpg";
-import SectionBarrier from "../components/sectionbarrier";
+import entertainmenthero from "../../media/dadlaga/entertainmenthero.png";
+import billiardImage from "../../media/dadlaga/billiard.jpg";
+import pool from "../../media/dadlaga/indoorpool.jpg";
+import cinema from "../../media/dadlaga/cinema.jpg";
+import bowling from "../../media/dadlaga/bowling.jpg";
+import SectionBarrier from "../../components/common/sectionbarrier";
 import { useTranslation } from "react-i18next";
 
 export default function Entertainment() {

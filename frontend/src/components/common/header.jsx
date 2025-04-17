@@ -14,7 +14,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import LanguageIcon from "@mui/icons-material/Language";
 import { Link } from "react-router-dom";
-import logo from "../media/logo.png";
+import logo from "../../media/logo.png";
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
@@ -59,14 +59,17 @@ export default function Header() {
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Logo */}
         <Box display="flex" alignItems="center">
-          <img
-            src={logo}
-            alt="Hotel Logo"
-            style={{
-              height: isMobile ? "6vh" : "10vh",
-              marginRight: "1rem",
-            }}
-          />
+          <Link to="/home">
+            <img
+              src={logo}
+              alt="Hotel Logo"
+              style={{
+                height: isMobile ? "6vh" : "10vh",
+                marginRight: "1rem",
+                cursor: "pointer", // Optional: adds a pointer cursor on hover
+              }}
+            />
+          </Link>
         </Box>
 
         {/* Desktop Navigation */}

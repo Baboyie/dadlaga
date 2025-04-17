@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {
+  Container,
+  TextField,
+  Button,
+  Typography,
+  Box,
+  Paper,
+  Alert,
+} from "@mui/material";
 
 const LoginPage = () => {
-  const [username, setUsername] = useState(""); // renamed from email
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -14,10 +23,7 @@ const LoginPage = () => {
     try {
       const response = await axios.post(
         "http://192.168.0.110:5000/api/admin/login",
-        {
-          username, // changed from email
-          password,
-        }
+        { username, password }
       );
 
       localStorage.setItem("authToken", response.data.token);
@@ -33,31 +39,45 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
-      <h1>Admin Login</h1>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Username</label>
-          <input
-            type="text"
+    <Container maxWidth="sm">
+      <Paper elevation={3} sx={{ padding: 4, marginTop: 8 }}>
+        <Typography variant="h4" align="center" gutterBottom>
+          Admin Login
+        </Typography>
+        <Box component="form" onSubmit={handleLogin} noValidate>
+          <TextField
+            label="Username"
+            fullWidth
+            margin="normal"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
           />
-        </div>
-        <div>
-          <label>Password</label>
-          <input
+          <TextField
+            label="Password"
             type="password"
+            fullWidth
+            margin="normal"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-        </div>
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        <button type="submit">Login</button>
-      </form>
-    </div>
+          {error && (
+            <Alert severity="error" sx={{ mt: 2 }}>
+              {error}
+            </Alert>
+          )}
+          <Button
+            type="submit"
+            variant="contained"
+            fullWidth
+            sx={{ marginTop: 3 }}
+          >
+            Login
+          </Button>
+        </Box>
+      </Paper>
+    </Container>
   );
 };
 

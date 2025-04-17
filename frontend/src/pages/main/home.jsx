@@ -6,18 +6,18 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import homebackground from "../media/dadlaga/homebackground1.jpg";
-import logo from "../media/logo.png";
-import SectionBarrier from "../components/sectionbarrier";
+import homebackground from "../../media/dadlaga/homebackground1.jpg";
+import logo from "../../media/logo.png";
+import SectionBarrier from "../../components/common/sectionbarrier";
 import { motion } from "framer-motion";
-import RoomCarousel from "../components/roomcarousel";
-import restaurantbg from "../media/dadlaga/restaurantbg.jpg";
-import EntertainmentCarousel from "../components/entertainmentcarousel";
-import ResponsiveMap from "../components/location";
+import RoomCarousel from "../../components/roomcarousel";
+import restaurantbg from "../../media/dadlaga/restaurantbg.jpg";
+import EntertainmentCarousel from "../../components/entertainmentcarousel";
+import ResponsiveMap from "../../components/location";
 import { useTranslation } from "react-i18next";
-import TransWithBreaks from "../components/transwithbreaks";
+import TransWithBreaks from "../../components/common/transwithbreaks";
 import { useNavigate } from "react-router-dom";
-import { getRooms } from "../api"; // Import the API function to get rooms
+import { getRooms } from "../../api"; // Import the API function to get rooms
 
 export default function Home() {
   const navigate = useNavigate();

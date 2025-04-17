@@ -1,15 +1,15 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import restaurantbackground from "../media/dadlaga/restaurantbackground.png";
-import cookspicture from "../media/dadlaga/restaurant/cooks.png";
-import SectionBarrier from "../components/sectionbarrier";
+import restaurantbackground from "../../media/dadlaga/restaurantbackground.png";
+import cookspicture from "../../media/dadlaga/restaurant/cooks.png";
+import SectionBarrier from "../../components/common/sectionbarrier";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import ThreeImageDisplay from "../components/foodmenu";
-import img1 from "../media/dadlaga/restaurant/menu1.jpg";
-import img2 from "../media/dadlaga/restaurant/menu2.jpg";
-import img3 from "../media/dadlaga/restaurant/menu3.jpg";
+import ThreeImageDisplay from "../../components/foodmenu";
+import img1 from "../../media/dadlaga/restaurant/menu1.jpg";
+import img2 from "../../media/dadlaga/restaurant/menu2.jpg";
+import img3 from "../../media/dadlaga/restaurant/menu3.jpg";
 import { useTranslation } from "react-i18next";
-import TransWithBreaks from "../components/transwithbreaks";
+import TransWithBreaks from "../../components/common/transwithbreaks";
 export default function Restaurant() {
   const { t } = useTranslation();
   return (

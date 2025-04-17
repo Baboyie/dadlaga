@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import aboutusbackground from "../media/dadlaga/aboutusbackground.png";
-import aboutuspicbetweentext from "../media/dadlaga/about_us_picbetweentext.png";
+import aboutusbackground from "../../media/dadlaga/aboutusbackground.png";
+import aboutuspicbetweentext from "../../media/dadlaga/about_us_picbetweentext.png";
 import { useTranslation } from "react-i18next";
-import TransWithBreaks from "../components/transwithbreaks";
+import TransWithBreaks from "../../components/common/transwithbreaks";
 export default function AboutUs() {
   const { t } = useTranslation();
   return (

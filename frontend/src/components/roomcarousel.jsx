@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Box, Button, useTheme, useMediaQuery } from "@mui/material";
+import { useNavigate } from "react-router-dom"; // ✅ import navigate
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { getRooms } from "../api"; // Assuming you've exported the getRooms function
+import { getRooms } from "../api";
 
 export default function RoomCarousel() {
-  const [rooms, setRooms] = useState([]); // State to store fetched rooms
+  const [rooms, setRooms] = useState([]);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
-  var currentLanguage = "en";
+  const navigate = useNavigate(); // ✅
+  const currentLanguage = "en";
 
-  // Fetch rooms when component mounts
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const data = await getRooms(); // Call the getRooms API function
-        setRooms(data); // Set fetched rooms to state
+        const data = await getRooms();
+        setRooms(data);
       } catch (error) {
         console.error("Failed to fetch rooms:", error);
       }
     };
-
     fetchRooms();
-  }, []); // Empty dependency array ensures this runs once on mount
+  }, []);
 
   const settings = {
     dots: false,
@@ -40,40 +40,27 @@ export default function RoomCarousel() {
         breakpoint: theme.breakpoints.values.md,
         settings: {
           slidesToShow: 1.5,
-          centerMode: false,
         },
       },
       {
         breakpoint: theme.breakpoints.values.sm,
         settings: {
           slidesToShow: 1,
-          centerMode: false,
         },
       },
     ],
   };
 
   return (
-    <Box
-      sx={{
-        backgroundColor: "#E9DDD1",
-        py: 3,
-        position: "relative",
-      }}
-    >
+    <Box sx={{ backgroundColor: "#E9DDD1", py: 3, position: "relative" }}>
       <Box
         sx={{
           width: "90%",
           maxWidth: "1200px",
           mx: "auto",
           position: "relative",
-          "& .slick-list": {
-            overflow: "visible",
-            py: 2,
-          },
-          "& .slick-slide": {
-            px: isMobile ? 1 : 2,
-          },
+          "& .slick-list": { overflow: "visible", py: 2 },
+          "& .slick-slide": { px: isMobile ? 1 : 2 },
           "& .slick-arrow": {
             width: 40,
             height: 40,
@@ -88,16 +75,12 @@ export default function RoomCarousel() {
           {rooms.map((room, index) => (
             <Box
               key={index}
-              sx={{
-                position: "relative",
-                height: "100%",
-                outline: "none",
-              }}
+              sx={{ position: "relative", height: "100%", outline: "none" }}
             >
               <Box
                 component="img"
-                src={room.image} // Assuming room data contains 'image' field
-                alt={room.title[currentLanguage]} // Use currentLanguage to access the right title
+                src={room.image}
+                alt={room.title[currentLanguage]}
                 sx={{
                   width: "100%",
                   height: isMobile ? "300px" : "400px",
@@ -105,13 +88,12 @@ export default function RoomCarousel() {
                   boxShadow: 3,
                   borderRadius: 0,
                   transition: "all 0.3s ease",
-                  "&:hover": {
-                    boxShadow: 6,
-                  },
+                  "&:hover": { boxShadow: 6 },
                 }}
               />
               <Button
                 variant="contained"
+                onClick={() => navigate(`/rooms/${room.id}`)} // ✅ navigate on click
                 sx={{
                   position: "absolute",
                   bottom: isMobile ? -20 : -25,
@@ -125,14 +107,11 @@ export default function RoomCarousel() {
                   minWidth: isMobile ? "180px" : "220px",
                   boxShadow: 3,
                   borderRadius: 0,
-                  "&:hover": {
-                    backgroundColor: "#333",
-                  },
+                  "&:hover": { backgroundColor: "#333" },
                   zIndex: 2,
                 }}
               >
-                {room.title[currentLanguage]}{" "}
-                {/* Render title based on the current language */}
+                {room.title[currentLanguage]}
               </Button>
             </Box>
           ))}

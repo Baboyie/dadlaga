@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Use environment variable with fallback to localhost for development
 const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL || "http://192.168.0.110:5000";
+  process.env.REACT_APP_API_BASE_URL || " http://192.168.0.110:5000";
 
 // Axios instance
 const api = axios.create({
@@ -12,7 +12,7 @@ const api = axios.create({
 
 // Function to get JWT token from localStorage
 const getToken = () => {
-  return localStorage.getItem("adminToken");
+  return localStorage.getItem("authToken");
 };
 
 // Add JWT token in headers dynamically

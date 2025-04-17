@@ -7,7 +7,11 @@ import {
   useMediaQuery,
   useTheme,
   CircularProgress,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CheckIcon from "@mui/icons-material/Check";
 import TvIcon from "@mui/icons-material/Tv";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -21,7 +25,7 @@ import ContentCutIcon from "@mui/icons-material/ContentCut";
 import LocalCafeIcon from "@mui/icons-material/LocalCafe";
 import HairDryerIcon from "@mui/icons-material/Blender";
 import { useTranslation } from "react-i18next";
-import { getRoomById } from "../api";
+import { getRoomById } from "../../api";
 
 export default function RoomDetails() {
   const { id } = useParams();
@@ -189,6 +193,62 @@ export default function RoomDetails() {
             </Box>
           );
         })}
+      </Box>
+      <Box
+        sx={{
+          width: "90vw",
+          maxWidth: 1200,
+          mx: "auto",
+          mb: 4,
+          pt: 4,
+        }}
+      >
+        <Accordion
+          sx={{
+            borderRadius: 2,
+            border: "1px solid #ccc",
+            boxShadow: 2,
+            backgroundColor: "#312828",
+            "&:before": {
+              display: "none",
+            },
+          }}
+        >
+          <AccordionSummary
+            expandIcon={
+              <ArrowDropDownIcon sx={{ color: "#a08c7d", fontSize: 40 }} />
+            }
+            sx={{
+              px: 3,
+              py: 2,
+              "& .MuiAccordionSummary-content": {
+                margin: 0,
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: isMobile ? "clamp(18px, 4.5vw, 22px)" : 28,
+                fontWeight: 500,
+                fontFamily: "Abhaya Libre",
+                color: "#E9DDD1",
+              }}
+            >
+              {t("room.rule.title")}
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails sx={{ px: 3, pb: 3 }}>
+            <Typography
+              sx={{
+                fontSize: isMobile ? "clamp(16px, 4vw, 20px)" : 20,
+                color: "#E9DDD1",
+                fontFamily: "Georgia",
+              }}
+            >
+              {t("room.rule.text")}
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
       </Box>
     </Box>
   );

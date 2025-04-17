@@ -7,7 +7,7 @@ import {
   Link as MuiLink,
 } from "@mui/material";
 import { Facebook, Instagram } from "@mui/icons-material";
-import logo from "../media/logo.png"; // Keep your original path
+import logo from "../../media/logo.png"; // Keep your original path
 import { useNavigate } from "react-router-dom"; // If using React Router
 
 const Footer = () => {
@@ -48,7 +48,6 @@ const Footer = () => {
           <Typography variant="body2">99110001</Typography>
           <Typography variant="body2">royalhotel.gmail.com</Typography>
         </Grid>
-
         {/* Social */}
         <Grid item xs={12} md={3}>
           <Typography variant="h6" sx={{ mb: 1, px: 15 }}>
@@ -73,7 +72,6 @@ const Footer = () => {
             <Instagram />
           </IconButton>
         </Grid>
-
         {/* Location */}
         <Grid item xs={12} md={3}>
           <Typography variant="h6" sx={{ mb: 1, px: 15 }}>
@@ -88,8 +86,7 @@ const Footer = () => {
           >
             J.Sambuu St, Chingeltei district <br /> 5th horoo, Ulaanbaatar
           </MuiLink>
-        </Grid>
-
+        </Grid>{" "}
         {/* FAQ */}
         <Grid item xs={12} md={3}>
           <Typography

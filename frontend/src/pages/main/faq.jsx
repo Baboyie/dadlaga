@@ -8,11 +8,11 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { motion } from "framer-motion";
-import faqBackground from "../media/dadlaga/aboutusbackground.png";
+import faqBackground from "../../media/dadlaga/aboutusbackground.png";
 import { useTranslation } from "react-i18next";
-import SectionBarrier from "../components/sectionbarrier";
+import SectionBarrier from "../../components/common/sectionbarrier";
 
 export default function FAQ() {
   const { t } = useTranslation();
@@ -108,7 +108,13 @@ export default function FAQ() {
             transition={{ duration: 0.6, delay: index * 0.1 }}
           >
             <Accordion>
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDropDownIcon
+                    sx={{ color: "#a08c7d", fontSize: 40 }} // You can tweak this number
+                  />
+                }
+              >
                 <Typography
                   sx={{
                     fontSize: isMobile ? "clamp(18px, 4.5vw, 22px)" : 32,

@@ -83,7 +83,11 @@
             "bookNow": "Book Now",
             "servicesAmenities": "Services & Amenities",
             "seeMore": "See More",
-            "people": "people"
+            "people": "people",
+            "rule":{
+        "title": "ROOM RULES",
+        "text": "Check-in and Check-out Time Check-in: From 2:00 PM Check-out: By 12:00 PM No Smoking Smoking is strictly prohibited inside the room and public areas. A cleaning fee will be charged if this rule is violated. No Pets Allowed Pets are not allowed in the hotel rooms. Respect Property Please do not damage or misuse the furniture or equipment in the room. Any damage will be charged to the guest. Noise Control Please avoid making loud noise after 10:00 PM to ensure a peaceful stay for all guests. Visitors Additional guests must be registered at the front desk and may be subject to extra charges. Safety Turn off lights and electrical appliances, and lock the door when leaving the room. Prohibited Activities The use of illegal substances, excessive alcohol consumption, and unlawful activities are strictly forbidden."
+      }
           }
   }
   
