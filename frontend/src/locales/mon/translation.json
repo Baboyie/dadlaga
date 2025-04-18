@@ -64,7 +64,7 @@
     "room": {
       "notFound": "Өрөө олдсонгүй",
       "maxOccupancy": "Орж болох хүний тоо",
-      "beds": "ор",
+      "bed": "ор",
       "night": "шөнө",
       "bookNow": "Захиалах",
       "servicesAmenities": "Өрөөний үйлчилгээ",

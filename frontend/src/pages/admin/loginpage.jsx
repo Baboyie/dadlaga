@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import {
   Container,
   TextField,
@@ -15,8 +14,6 @@ const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const navigate = useNavigate();
-
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -28,7 +25,8 @@ const LoginPage = () => {
 
       localStorage.setItem("authToken", response.data.token);
       alert("Login successful!");
-      navigate("/admin");
+      console.log("Login successful, token stored:", response.data.token);
+      window.location.reload();
     } catch (err) {
       if (err.response?.data?.message) {
         setError(err.response.data.message);

@@ -78,7 +78,7 @@
           "room": {
             "notFound": "Room not found",
             "maxOccupancy": "Max Occupancy",
-            "beds": "Bed(s)",
+            "bed": "Bed(s)",
             "night": "night",
             "bookNow": "Book Now",
             "servicesAmenities": "Services & Amenities",

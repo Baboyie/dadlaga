@@ -33,15 +33,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route
-              path="/login"
-              element={
-                !isAuthenticated() ? <LoginPage /> : <Navigate to="/admin" />
-              }
-            />{" "}
-            <Route
               path="/admin"
               element={
                 isAuthenticated() ? <AdminPanel /> : <Navigate to="/login" />
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                isAuthenticated() ? <Navigate to="/admin" /> : <LoginPage />
               }
             />
             <Route

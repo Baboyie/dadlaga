@@ -64,6 +64,7 @@ export default function RoomCarousel() {
           "& .slick-arrow": {
             width: 40,
             height: 40,
+            zIndex: 3,
             "&:before": {
               fontSize: 30,
               color: theme.palette.text.primary,

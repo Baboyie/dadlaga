@@ -118,7 +118,7 @@ export default function RoomDetails() {
         {currentLanguage === "en" ? description.en : description.mon}
       </Typography>
       <Typography sx={{ fontStyle: "italic" }}>
-        {t("room.maxOccupancy")}: {guest} | {t("room.beds")}: {bed}
+        {t("room.maxOccupancy")}: {guest} | {t("room.bed")}: {bed}
       </Typography>
 
       {/* Price and Book Now */}
